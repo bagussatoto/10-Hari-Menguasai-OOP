@@ -8,7 +8,7 @@
 
 <br>
 <h2>2. Dasar Teori</h2>
-**[Paradigma Pemrograman]**
+<p>Paradigma Pemrograman</p>
 <p>Object Oriented Programming (OOP) merupakan salah satu dari sekian banyak pendekatan
 atau paradigma (pola) dalam membuat perangkat lunak. Dalam dunia industri, dikenal beberapa
 paradigma selain OOP, seperti functional programming, procedural programming, logic
@@ -46,6 +46,90 @@ Double speedCurrent:0;
 <p>3.3. Melalui jendela Solution Explorer, tambahkan new class dengan cara klik kanan.
 Tambahkan class Car dengan rincian sebagai berikut.</p>
 
+```
+using System;
+using System.Collections.Generic;
+using System.Text;
 
+namespace Project1TheSuperCar
+{
+    class Car
+    {
+        String color = "red";
+        int transmissionState = 0;
+        Double speedMax = 250;
+        public Double speedCurrent = 0;
+        
+        public void go()
+        {
+                speedCurrent += 10;
+        }
+    }
+}
+```
 
+<p>3.4. Buka file Program.cs kemudian ubahlah sesuai contoh berikut.</p>
 
+```
+using System;
+
+namespace Project1TheSuperCar
+{
+        class Program
+        {
+                static void Main(string[] args)
+
+            {
+        
+                Console.WriteLine("Hello The Super Car!");
+                Car lamborgini = new Car();
+                Console.WriteLine("current speed : "+lamborgini.speedCurrent);
+                lamborgini.go();
+                Console.WriteLine("current speed : "+lamborgini.speedCurrent);
+                lamborgini.go();
+                Console.WriteLine("current speed : "+lamborgini.speedCurrent);
+                lamborgini.go();
+                Console.WriteLine("current speed : "+lamborgini.speedCurrent);
+            }
+        }
+}
+```
+
+<p>3.4. Apabila kode Anda benar, program akan mengeluarkan hasil sebagai berikut</p>
+
+```
+Hello The Super Car!
+current speed : 0
+current speed : 10
+current speed : 20
+current speed : 30
+Press any key to continue . . .
+```
+
+<br>
+<h2>4. Tugas</h2>
+<p>Buatlah class Motor supaya program utama ini bisa berjalan, dengan ketentuan apabila motor dipanggil fungsi go maka kecepatannya akan bertambah 10 sedangkan bila dipanggil fungsi turnLeft() kecepatanya turun sebanyak 2.</p>
+
+```
+namespace Project1TheSuperCar
+{
+        class Program
+        {
+                static void Main(string[] args)
+                {
+                MotorSport motorSport = new MotorSport();
+                Console.WriteLine("current speed : " +
+                motorSport.speedCurrent);
+                motorSport.go();//speed = 10
+                Console.WriteLine("current speed : " +
+                motorSport.speedCurrent);
+                motorSport.turnLeft();//speed = 8
+                Console.WriteLine("current speed : " +
+                motorSport.speedCurrent);
+                motorSport.go();//speed = 18
+                Console.WriteLine("current speed : " +
+                motorSport.speedCurrent);
+                }
+        }
+}
+```
