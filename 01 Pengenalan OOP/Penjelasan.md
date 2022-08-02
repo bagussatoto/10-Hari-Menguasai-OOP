@@ -8,7 +8,7 @@
 
 <br>
 <h2>2. Dasar Teori</h2>
-<p><span>Paradigma Pemrograman</span></p>
+**[Paradigma Pemrograman]**
 <p>Object Oriented Programming (OOP) merupakan salah satu dari sekian banyak pendekatan
 atau paradigma (pola) dalam membuat perangkat lunak. Dalam dunia industri, dikenal beberapa
 paradigma selain OOP, seperti functional programming, procedural programming, logic
@@ -38,7 +38,13 @@ Double speedCurrent:0;
 ```
 
 <h2>3. Latihan</h2>
-
+<p>3.1. Buka Visual Studio, buatlah new project dengan memilih Console App (.NET Core)</p>
+<p>3.2. By default, Visual Studio akan memberikan template standar Hello World. Pastikan project
+        ini bisa di run dengan cara menekan CTRL + F5 atau menu debug > Start Without
+        Debugging. Sampai pada langkah ini, akan muncul jendela baru berupa console bertuliskan
+        Hello World.
+<p>3.3. Melalui jendela Solution Explorer, tambahkan new class dengan cara klik kanan.
+Tambahkan class Car dengan rincian sebagai berikut.</p>
 
 
 
