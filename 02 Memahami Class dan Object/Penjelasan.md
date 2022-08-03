@@ -206,13 +206,12 @@ yang ada di dalam keranjang.</p>
 Total : 8
 ```
 
-
 <ul>
-  <ul>
-    <br>
+<ul>
+<br>
     
-    <h2>Tugas</h2>
-    <p>Lengkapilah program dibawah ini supaya thermometer dapat digunakan</p>
+<h2>Tugas</h2>
+<p>Lengkapilah program dibawah ini supaya thermometer dapat digunakan</p>
         
 ```
 using System;
