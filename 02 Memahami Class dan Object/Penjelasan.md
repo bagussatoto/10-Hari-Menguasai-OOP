@@ -71,8 +71,7 @@ public boolean buildCar(String door, int maxSpeed, boolean isMatic){
 sebuah class dengan standarisasi tertentu. Sebuah class diagram terdiri atas tiga bagian,(1)
 nama class, (2) variabel, dan (3) method.</p>
 
-
-
+<img width="1002" alt="Class Diagram" src="https://user-images.githubusercontent.com/87259393/182534130-12d03559-8162-4b97-a004-db41ece4b159.png">
 
 
 
