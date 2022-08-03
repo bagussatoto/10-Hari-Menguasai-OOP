@@ -372,5 +372,33 @@ namespace TheSuperComputer
 }    
 ```    
     
+<br>
+<p>Apabila COde Anda berhasil, Maka anda mendapatkan ouput pada tomobol terminal seperti berikut.</p>
+    
+```    
+Monitor spec :Monitor resolution: 1200x600 ; Monitor support hdmi : True;
+Monitor dimensi : 32 inch
+Processor spec : Processor series:CORE i7 8th Gen; Processor core: 8 ;
+Processor cache:254
+Printer spec : Printer brand : HP ; Printer series : MP102 ; Printer paper
+per minutes (ppm) : 50
+Vga spec : Vga brand : Nvidia ; Vga clock graphics : 2054 ; Vga clock
+memory : 2054
+Ram spec : Ram type : DDR4 ; Ram speed : 5000 ; Ram size :8000
+```    
+    
+<br>    
+<h2>Tugas</h2>    
+    
+- Tidak ada tugas di kelas
+- Tuliskan dalam laporan praktikum Anda mengenai beberapa hal berikut
+    - Penjelasan penerapan constructor pada latihan ini
+    - Pengertian penerapan akses modifier pada latihan ini
+    - Cara melewatkan sebuah nilai melalui constructor ke dalam class lain
+    - Gambarkan kembali semua code pada bab ini menggunakan class diagram
+    - Kelebihan fluent builder pattern
+
+    
+    
     
     
