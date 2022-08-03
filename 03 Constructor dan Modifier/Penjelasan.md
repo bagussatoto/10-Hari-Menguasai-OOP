@@ -89,6 +89,123 @@ Program.cs, Ram.cs dan Vga.cs
 2. Ubahlah setiap class yang telah Anda buat dengan code sebagai berikut kemudian
 jalankan.
 
+<br>
+<p>Monitor.cs</p> 
 
+ ```
+using System;
+    
+namespace TheSuperComputer
+{
+        class Monitor
+        {
+            //resolution, supporthdmi, size
+            private String resolution;
+            private Boolean supportHdmi;
+            private double size;
+            public Monitor(String resolution, Boolean supportHdmi, double size){
+            this.resolution = resolution;
+            this.supportHdmi = supportHdmi;
+            this.size = size;
+        }
+            private String getResolution(){
+            return this.resolution;
+        }
+            private Boolean isSupportHdmi(){
+            return this.supportHdmi;
+        }
+            private double getSize(){
+            return this.size;
+        }
+            public override string ToString()
+        {
+            return $"Monitor resolution: {resolution} ; Monitor support hdmi :
+            {supportHdmi}; Monitor dimensi : {size} inch ";
+        }
+    }
+}    
+```    
+ 
+<br>
+<p>Printer.cs</p>
+  
+```
+using System;
+    
+namespace TheSuperComputer
+{
+    class Printer
+    {
+        private String brand;
+        private String series;
+        private int ppm;
+        public Printer(String brand,String series,int ppm){
+        this.brand = brand;
+        this.series = series;
+        this.ppm = ppm;
+    }
+        public String getBrand(){
+        return this.brand;
+    }
+        public String getSeries(){
+        return this.series;
+    }
+        public int getPpm(){
+        return this.ppm;
+    }
+        public override string ToString()
+    {
+        return $"Printer brand : {this.brand} ; Printer series :
+        {this.series} ; Printer paper per minutes (ppm) : {this.ppm}";
+    }
+  }
+}
+```
+    
+<br>
+<p>Processor.cs</p>
+    
+```
+using System;
+    
+namespace TheSuperComputer
+{
+        class Processor
+
+        {
+            //processor : series, core, cache
+            private String series;
+            private int core;
+            private int cache;
+            public Processor(){
+        }
+            public void setSeries(String series){
+            this.series = series;
+        }
+            public String getSeries(){
+            return this.series;
+        }
+            public void setCore(int core){
+            this.core = core;
+        }
+            public int getCore(){
+            return this.core;
+        }
+            public void setCache(int cache){
+            this.cache = cache;
+        }
+            public int getCache(){
+            return this.cache;
+        }
+            public override string ToString()
+        {
+            return $"Processor series:{this.series}; Processor core: {this.core}
+            ; Processor cache:{this.cache}";
+        }
+   }
+}
+```        
+    
+    
 
 
