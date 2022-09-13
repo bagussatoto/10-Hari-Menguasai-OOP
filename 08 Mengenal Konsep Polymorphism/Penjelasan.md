@@ -146,23 +146,105 @@ namespace BursaMobil
 }
 ```
   
+<p>3 Ubahlah class Program.cs lalu jalankan program.</p>
 
+```
+using System;
 
+namespace BursaMobil
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Avanza avanza = new Avanza();
+            avanza.checkAccu();
+            avanza.checkFuel();
+            avanza.checkRadiator();
+            avanza.startEngine();
+            Car mobilio = new Mobilio();
+            mobilio.startEngine();
+        }
+    }
+}
+```
 
+<p>Catatan :</p>
 
+<p>Mesin 100 buah mobil dapat dinyalakan dengan prosedur yang sama, berurutan mulai dari <code>checkAccu(), checkRadiator(), checkFuel() </code> dan <code>startEngine()</code>. Hal ini bisa kita ringkas dengan cara membuat satu object Car sebagai parent semua jenis mobil. Object Car memiliki default logic atau prosedur untuk menyalakan mobil. Dalam hal ini, diwakili dengan virtual method <code>startEngine().</code></p>
 
+```
+public override void startEngine()
+    {
+        Console.WriteLine("Mobilio preparation....");
+        base.startEngine();//memanggil default prosedur dari Car
+        lockTheDoor();
+    }
+```
 
+<p>Kemudian method startEngine() diwariskan (overriding) kepada object turunannya (dalam hal ini object Mobilio). Dengan cara demikian, setiap kali method startEngine() pada object Mobilio dipanggil, secara otomatis akan memicu pula rangkaian startEngine() yang terdapat pada object parent.</p>
 
+<p>Percobaan 3.</p>
+<p>1 Buatlah class Xpander.cs dengan mewariskan object Car</p>
 
+```
+using System;
+using System.Collections.Generic;
+using System.Text;
 
+namespace BursaMobil
+{
+    class Xpander : Car
+    {
+        public override void startEngine()
+        {
+            Console.WriteLine("Xpander preparation....");
+            base.startEngine();
+            turnOnSpotify();
+        }
+            private void turnOnSpotify()
+        {
+            Console.WriteLine("Xpander turn on the music via spotify");
+        }
+    }
+}
+```
 
+<p>2 Ubahlah class Program.cs lalu jalankan program.</p>
 
+```
+using System;
 
+namespace BursaMobil
+{
+  class Program
+  {
+      static void Main(string[] args)
+      {
+          Avanza avanza = new Avanza();
+          avanza.checkAccu();
+          avanza.checkFuel();
+          avanza.checkFuel();
+          avanza.startEngine();
+          
+          Car mobilio = new Mobilio();
+          mobilio.startEngine();
+          Car xpander = new Xpander();
+          xpander.startEngine();
+      }
+  }
+}
+```
 
+<p>Catatan :</p>
+<p>Dengan cara perobaan 2 dan percobaan 3, maka prosedur yang sama bisa dikumpulkan menjadi default prosedur. Bahkan kita bisa saja memodifikasi prosedur dengan cara menambahkan logic didalam method override startEngine pada class Xpander maupun Mobilio. Tampak pada percobaan 3, prosedur pada Xpander ditambahi dengan menyalakan musik turnOnSpotify().</p>
 
+<p>Tugas</p>
+<p>1. Apa beda method overriding dengan method overloading ?</P
+<p>2. Bilamana harus menggunakan Static Polymorphism dan Dynamic Polymorphism?</p>
 
-
-
+<h2>2 Referensi</h2>
+<p>https://www.onlinebuff.com/article_oops-principle-polymorphism-in-c-with-an-example_17.html</p>
 
 
 
