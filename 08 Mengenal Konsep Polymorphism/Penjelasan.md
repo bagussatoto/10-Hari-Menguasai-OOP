@@ -87,10 +87,99 @@ namespace BursaMobil
 <p>Catatan :</p>
 </p>Agar mesin pada mobil avanza dapat dinyalakan, harus melalui serangkaian proses mulai dari cek kondisi aki, radiator hingga bensin. Apabila prosedur selesai dikerjakan, baru bisa dinyalakan mesinnya menggunakan method startEngine(). Bayangkan apabila mobilnya banyak (misal Anda membuat Game dan ada 100 object mobil) maka masing-masing harus diinisiasi dengan cara yang sama (memerlukan 5 buah baris mulai dari new () hingga startEngine) sebanyak 100 macam object mobil. Wow!</p>
   
+<p>Percobaan 2.</p>
+<p>1 Masih dalam project yang sama, tambahkan class baru bernama Car.cs</p>
+
+```
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace BursaMobil
+{
+    class Car
+    {
+        private void checkAccu()
+        {
+          Console.WriteLine("checkup accu");
+        }
+          private void checkRadiator()
+        {
+          Console.WriteLine("checkup radiator");
+        }
+          public void checkFuel()
+        {
+          Console.WriteLine("checkup fuel");
+        }
+          public virtual void startEngine()
+        {
+          checkAccu();
+          checkRadiator();
+          checkFuel();
+        }
+    }
+}
+```
   
+<p>2 Buatlah class Mobilio.cs dengan mewariskan object Car.</p>
+
+```
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace BursaMobil
+{
+    class Mobilio : Car
+    {
+        public override void startEngine()
+        {
+            Console.WriteLine("Mobilio preparation....");
+            base.startEngine();
+            lockTheDoor();
+        }
+            private void lockTheDoor()
+        {
+            Console.WriteLine("Mobilio lock the door");
+        }
+    }
+}
+```
   
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
