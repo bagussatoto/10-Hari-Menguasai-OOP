@@ -1,4 +1,4 @@
-<h1>7 </h1>
+<h1>Hari 7 </h1>
 
 <h1>Pengenalan Konsep Inheritance</h2>
 
