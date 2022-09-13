@@ -1,5 +1,5 @@
 <h1> Hari 6</h2>
-<h1>6. Pengenalan dan Penerapan Interface</h1>
+<h1> Pengenalan dan Penerapan Interface</h1>
 
 <h2>1. Tujuan</h2>
 <p>1. Mahasiswa mengerti penggunaan interface</p>
@@ -38,16 +38,101 @@ maka ia harus melayani permintaan client yang datang hampir bersamaan secara par
 server akan membuat thread untuk melayani tiap client yg datang. setiap client dilayani oleh
 satu thread. sehingga tidak ada antrian jika client yang datang banyak.</p>
 
+<h2>3 Langkah-langkah</h2>
+<p>1. Buat project baru dengan nama TheRestaurant.</p>
+<p>2. Buatlah interface CookingListener.cs</p>
 
+```
+using System;
+using System.Collections.Generic;
+using System.Text;
 
+namespace TheBreakfast
+{
+    interface CookListener
+    {
+        void onPreparation();
+        void onCooking(String message);
+        void onReady(String message);
+    }
+}
+```
 
+<p>3. Tambahkan class Egg.cs</p>
 
+```
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading;
 
+namespace TheBreakfast
+{
+    class Egg
+    {
+        private CookListener listener;
+        public Egg(CookListener listener)
+        {
+        this.listener = listener;
+        }
+        
+        public void startCooking()
+        {
+            this.listener.onPreparation();
+            ThreadStart cooking = new ThreadStart(cookingProcess);
+            Thread childThread = new Thread(cooking);
+            childThread.Start();
+        }
+        
+        private void cookingProcess()
+        {
+            // do some work, like counting to 10 on other threads
+            for (int counter = 10; counter >= 0; counter--)
+        {
+            Thread.Sleep(1000);
+            this.listener.onCooking("cooking. wait for ..." + counter +
+            " second.");
+        }
+        
+        this.listener.onReady("Done. Egg ready to eat");
+        }
+    }
+}
+```
 
+<p>4. Tambahkan Class EggCookingListener.cs pada file Program.cs</p>
 
+```
+using System;
 
+namespace TheBreakfast
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        //....
+        }
+    }
+    
+    class EggCookingListener : CookListener
+    {
+    public void onCooking(string message)
+      {
+      Console.WriteLine(message);
+      }
+      public void onPreparation()
+      {
+      Console.WriteLine("prepared...");
+      }
 
-
+    public void onReady(string message)
+      {
+      Console.WriteLine(message);
+      }
+   }
+}
+```
 
 
 
