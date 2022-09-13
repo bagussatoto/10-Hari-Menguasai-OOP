@@ -158,7 +158,7 @@ namespace TheBreakfast
 <h2> 4 Pertanyaan dan Tugas</h2>
 
 <p>1. Mengapa "Please wait. Enjoy your table" bisa dieksekusi lebih dahulu daripada
-"Done. Egg ready to eat" ? Padahal egg.startCooking() dijalankan lebih dulu.</p>
+  "Done. Egg ready to eat" ? Padahal <code>egg.startCooking()</code> dijalankan lebih dulu.</p>
 
 <p>2. Carilah contoh lain dari penerapan Interface pada sebuah program!</p>
 
