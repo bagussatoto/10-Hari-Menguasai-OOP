@@ -7,7 +7,7 @@
 
 <h2>2 Dasar Teori</h2>
 
-<p> Inheritance adalah turunan atau pewarisan suatu class ke class baru dengan mewakili
+<p> <code> Inheritance</code> adalah turunan atau pewarisan suatu class ke class baru dengan mewakili
 semua function yang ada di class utama (parent class). Inheritance sering sekali digunakan
 di dalam promgraman berorientasi objek atau OOP. Dengan kata lain, class utama (parent
 class) dengan classes turunannya berhubungan satu sama lain. Contohnya seperti Gambar
