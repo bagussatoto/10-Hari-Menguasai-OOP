@@ -134,9 +134,31 @@ namespace TheBreakfast
 }
 ```
 
+<p>5. Ubahlah code Main pada Program.cs</p>
 
+```
+using System;
 
+namespace TheBreakfast
+{
+    class Program
+    {
+      static void Main(string[] args)
+    {
+      Console.WriteLine("Welcome to the restaurant!");
+      Egg egg = new Egg(new EggCookingListener());
+      egg.startCooking();
+      Console.WriteLine("Please wait. Enjoy your table");
+    }
+  }
+  // other class...
+}
+```
 
+<h2> 4 Pertanyaan dan Tugas</h2>
 
+<p>1. Mengapa "Please wait. Enjoy your table" bisa dieksekusi lebih dahulu daripada
+"Done. Egg ready to eat" ? Padahal egg.startCooking() dijalankan lebih dulu.</p>
 
+<p>2. Carilah contoh lain dari penerapan Interface pada sebuah program!</p>
 
