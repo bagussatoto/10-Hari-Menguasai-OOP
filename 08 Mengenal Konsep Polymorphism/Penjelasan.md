@@ -243,7 +243,7 @@ namespace BursaMobil
 <p>1. Apa beda method overriding dengan method overloading ?</P
 <p>2. Bilamana harus menggunakan Static Polymorphism dan Dynamic Polymorphism?</p>
 
-<h2>2 Referensi</h2>
+<h2>3 Referensi</h2>
 <p>https://www.onlinebuff.com/article_oops-principle-polymorphism-in-c-with-an-example_17.html</p>
 
 
